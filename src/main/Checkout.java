@@ -21,6 +21,7 @@ public class Checkout extends javax.swing.JFrame {
         this.cartForm = cartForm; 
         initComponents();
         populateTable();
+        computeTotal();
    }
 
     /**
@@ -169,6 +170,19 @@ public class Checkout extends javax.swing.JFrame {
         
         checkoutTable.setModel(model);
     }
+    
+    /**
+     * Compute and display the total of the products bought.
+     */
+    private void computeTotal() {
+        DefaultTableModel model = (DefaultTableModel) checkoutTable.getModel();
+        double total = 0;
+        for (int i = 0; i < model.getRowCount(); i++){
+            total += Double.parseDouble(model.getValueAt(i, 3).toString());
+        }
+        
+        totalLabel.setText(Double.toString(total));
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
@@ -179,5 +193,6 @@ public class Checkout extends javax.swing.JFrame {
     private javax.swing.JTextField paymentFIeld;
     private javax.swing.JLabel totalLabel;
     // End of variables declaration//GEN-END:variables
+
 
 }
