@@ -8,6 +8,7 @@ package main;
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JCheckBox;
+import javax.swing.JFrame;
 
 /**
  *
@@ -23,6 +24,7 @@ public class Cart extends javax.swing.JFrame {
         initProducts();
     }
     
+    JFrame checkoutForm = new Checkout(this);
     ArrayList<Product> products = new ArrayList<>();
     DefaultListModel selectedItems = new DefaultListModel();
     
@@ -127,6 +129,11 @@ public class Cart extends javax.swing.JFrame {
         });
 
         checkoutButton.setText("CHECKOUT");
+        checkoutButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                checkoutButtonActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -256,6 +263,11 @@ public class Cart extends javax.swing.JFrame {
         selectedItems.remove(selectedItemIndex);
         cartList.setModel(selectedItems);
     }//GEN-LAST:event_removeItemButtonActionPerformed
+
+    private void checkoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutButtonActionPerformed
+        checkoutForm.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_checkoutButtonActionPerformed
 
     /**
      * @param args the command line arguments
