@@ -111,6 +111,11 @@ public class Cart extends javax.swing.JFrame {
         });
 
         removeItemButton.setText("REMOVE ITEM");
+        removeItemButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                removeItemButtonActionPerformed(evt);
+            }
+        });
 
         jScrollPane1.setViewportView(cartList);
 
@@ -217,14 +222,40 @@ public class Cart extends javax.swing.JFrame {
         cartList.setModel(selectedItems);
     }//GEN-LAST:event_addToCartButtonActionPerformed
 
+    /**
+     * Uncheck all items.
+     * 
+     * @param evt 
+     */
     private void uncheckAllButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uncheckAllButtonActionPerformed
         uncheckAll();
     }//GEN-LAST:event_uncheckAllButtonActionPerformed
-
+    
+    /**
+     * Clear the Shopping Cart
+     * 
+     * @param evt 
+     */
     private void clearCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCartButtonActionPerformed
         selectedItems.clear();
         cartList.setModel(selectedItems);
     }//GEN-LAST:event_clearCartButtonActionPerformed
+    
+    /**
+     * Remove an item from the shopping cart.
+     * 
+     * @param evt 
+     */
+    private void removeItemButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_removeItemButtonActionPerformed
+        int selectedItemIndex = cartList.getSelectedIndex();
+        
+        if (selectedItemIndex < 0) {
+            return;
+        }
+        
+        selectedItems.remove(selectedItemIndex);
+        cartList.setModel(selectedItems);
+    }//GEN-LAST:event_removeItemButtonActionPerformed
 
     /**
      * @param args the command line arguments
