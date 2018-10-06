@@ -5,7 +5,9 @@
  */
 package main;
 
+import java.util.Vector;
 import javax.swing.JFrame;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -13,11 +15,12 @@ import javax.swing.JFrame;
  */
 public class Checkout extends javax.swing.JFrame {
 
-    JFrame cartForm;
+    Cart cartForm;
     
     Checkout(Cart cartForm) {
-        initComponents();
         this.cartForm = cartForm; 
+        initComponents();
+        populateTable();
    }
 
     /**
@@ -112,11 +115,60 @@ public class Checkout extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    /**
+     * Go back to the shopping cart.
+     * 
+     * @param evt 
+     */
     private void backButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backButtonActionPerformed
         cartForm.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_backButtonActionPerformed
+    
+    /**
+     * Populate the products table.
+     */
+    private void populateTable() {
+        DefaultTableModel model = (DefaultTableModel) checkoutTable.getModel();
+        
+        for (int i = 0; i < cartForm.selectedItemsName.getSize(); i++) {
+            Vector row = new Vector();
+            String productName = cartForm.selectedItemsName.getElementAt(i);
+            boolean foundDuplicate = false;
+            
+            for (int j = 0; j < model.getRowCount(); j++) {
+                if (model.getValueAt(j, 0).equals(productName)) {
+                    int quantity = Integer.parseInt(model.getValueAt(j, 2).toString());
+                    model.setValueAt(++quantity, j, 2);
+                    
+                    for (Product product: cartForm.products) {
+                        if (product.getName().equals(productName)) {
+                            model.setValueAt(quantity * product.getPrice() , j, 3);
+                        }
+                    }
+                    
+                    foundDuplicate = true;
+                }
+            }
+            
+            if (!foundDuplicate) {
+                
+                row.add(productName);
+                
+                for (Product product: cartForm.products) {
+                    if (product.getName().equals(productName)) {
+                        row.add(product.getPrice());
+                        row.add("1");
+                        row.add(product.getPrice());
+                    }
+                }
 
+                model.addRow(row);
+            }
+        }
+        
+        checkoutTable.setModel(model);
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backButton;
@@ -127,4 +179,5 @@ public class Checkout extends javax.swing.JFrame {
     private javax.swing.JTextField paymentFIeld;
     private javax.swing.JLabel totalLabel;
     // End of variables declaration//GEN-END:variables
+
 }

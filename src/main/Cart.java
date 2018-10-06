@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.DefaultListModel;
 import javax.swing.JCheckBox;
 import javax.swing.JFrame;
+import javax.swing.JList;
 
 /**
  *
@@ -24,9 +25,9 @@ public class Cart extends javax.swing.JFrame {
         initProducts();
     }
     
-    JFrame checkoutForm = new Checkout(this);
     ArrayList<Product> products = new ArrayList<>();
-    DefaultListModel selectedItems = new DefaultListModel();
+    ArrayList<Product> selectedItems = new ArrayList<>();
+    DefaultListModel<String> selectedItemsName = new DefaultListModel<>();
     
     /**
      * Initialize the items list.
@@ -221,12 +222,16 @@ public class Cart extends javax.swing.JFrame {
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
         for (Product product: products) {
             if (product.getCheckbox().isSelected()) {
-                selectedItems.addElement(product.getName());
+                selectedItemsName.addElement(product.getName());
+                
+                if (selectedItems.contains(evt)) {
+                    
+                }
             }
         }
         
         uncheckAll();
-        cartList.setModel(selectedItems);
+        cartList.setModel(selectedItemsName);
     }//GEN-LAST:event_addToCartButtonActionPerformed
 
     /**
@@ -244,8 +249,8 @@ public class Cart extends javax.swing.JFrame {
      * @param evt 
      */
     private void clearCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearCartButtonActionPerformed
-        selectedItems.clear();
-        cartList.setModel(selectedItems);
+        selectedItemsName.clear();
+        cartList.setModel(selectedItemsName);
     }//GEN-LAST:event_clearCartButtonActionPerformed
     
     /**
@@ -260,12 +265,17 @@ public class Cart extends javax.swing.JFrame {
             return;
         }
         
-        selectedItems.remove(selectedItemIndex);
-        cartList.setModel(selectedItems);
+        selectedItemsName.remove(selectedItemIndex);
+        cartList.setModel(selectedItemsName);
     }//GEN-LAST:event_removeItemButtonActionPerformed
-
+    
+    /**
+     * Create and show a new checkout frame.
+     * 
+     * @param evt 
+     */
     private void checkoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutButtonActionPerformed
-        checkoutForm.setVisible(true);
+        (new Checkout(this)).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_checkoutButtonActionPerformed
 
