@@ -23,8 +23,8 @@ public class Receipt extends javax.swing.JFrame {
         initComponents();
         populateTable();
         
-        paymentLabel.setText(Double.toString(this.checkoutForm.payment));
-        totalLabel.setText(Double.toString(this.checkoutForm.total));
+        paymentLabel.setText(String.format("%.2f", this.checkoutForm.payment));
+        totalLabel.setText(String.format("%.2f", this.checkoutForm.total));
         
         double change = this.checkoutForm.payment - this.checkoutForm.total;
         
