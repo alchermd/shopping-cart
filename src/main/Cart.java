@@ -277,6 +277,11 @@ public class Cart extends javax.swing.JFrame {
      * @param evt 
      */
     private void checkoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkoutButtonActionPerformed
+        if (selectedItemsName.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "Cart is empty.");
+            return;
+        }
+        
         (new Checkout(this)).setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_checkoutButtonActionPerformed
