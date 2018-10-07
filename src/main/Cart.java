@@ -7,9 +7,7 @@ package main;
 
 import java.util.ArrayList;
 import javax.swing.DefaultListModel;
-import javax.swing.JCheckBox;
-import javax.swing.JFrame;
-import javax.swing.JList;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -220,15 +218,18 @@ public class Cart extends javax.swing.JFrame {
      * @param evt 
      */
     private void addToCartButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addToCartButtonActionPerformed
+        boolean anItemIsSelected = false;
+        
         for (Product product: products) {
             if (product.getCheckbox().isSelected()) {
                 selectedItemsName.addElement(product.getName());
-                
-                if (selectedItems.contains(evt)) {
-                    
-                }
+                anItemIsSelected = true;
             }
         }
+        
+        if (!anItemIsSelected) {
+            JOptionPane.showMessageDialog(this, "No products selected");
+        } 
         
         uncheckAll();
         cartList.setModel(selectedItemsName);
