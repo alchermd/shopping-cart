@@ -263,6 +263,7 @@ public class Cart extends javax.swing.JFrame {
         int selectedItemIndex = cartList.getSelectedIndex();
         
         if (selectedItemIndex < 0) {
+            JOptionPane.showMessageDialog(this, "No product selected");
             return;
         }
         
