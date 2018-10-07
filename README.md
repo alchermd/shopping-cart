@@ -1,6 +1,8 @@
 # shopping-cart
 A very simple shopping cart implemented in Swing (JForm)
 
+![](img/preview.png)
+
 ## About
 
 This project is made in fulfillment of the _Independent Learning_ module for the class `Software Engineering`. Released as open source for educational purposes.
@@ -8,6 +10,8 @@ This project is made in fulfillment of the _Independent Learning_ module for the
 Created by [John Alcher Doloiras](https://github.com/alchermd), CS-SD 2018-19.
 
 ## Usage
+
+*If you already have the `.jar` file, just open it up!*
 
 1. Download the zip file and extract to desired destination.
 
