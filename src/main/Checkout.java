@@ -6,7 +6,10 @@
 package main;
 
 import java.util.Vector;
+import javax.swing.JDialog;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
 /**
@@ -16,6 +19,8 @@ import javax.swing.table.DefaultTableModel;
 public class Checkout extends javax.swing.JFrame {
 
     Cart cartForm;
+    double total = 0;
+    double payment = 0;
     
     Checkout(Cart cartForm) {
         this.cartForm = cartForm; 
@@ -64,6 +69,11 @@ public class Checkout extends javax.swing.JFrame {
         jLabel1.setText("Total:");
 
         paymentButton.setText("PAY");
+        paymentButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                paymentButtonActionPerformed(evt);
+            }
+        });
 
         totalLabel.setText("0");
 
@@ -125,6 +135,28 @@ public class Checkout extends javax.swing.JFrame {
         cartForm.setVisible(true);
         this.dispose();
     }//GEN-LAST:event_backButtonActionPerformed
+
+    /**
+     * Pay for the products.
+     * 
+     * @param evt 
+     */
+    private void paymentButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_paymentButtonActionPerformed
+        try {
+            payment = Double.parseDouble(paymentFIeld.getText());
+            
+            if (payment < total) {
+                JOptionPane.showMessageDialog(this, "Insufficient payment.");
+            } else {                                             
+                (new Receipt(this)).setVisible(true);
+                this.setVisible(false);
+            }
+            
+        } catch(NumberFormatException e) {
+            JOptionPane.showMessageDialog(this, "Invalid payment.");
+            paymentFIeld.setText(null);
+        }
+    }//GEN-LAST:event_paymentButtonActionPerformed
     
     /**
      * Populate the products table.
@@ -176,12 +208,12 @@ public class Checkout extends javax.swing.JFrame {
      */
     private void computeTotal() {
         DefaultTableModel model = (DefaultTableModel) checkoutTable.getModel();
-        double total = 0;
+        
         for (int i = 0; i < model.getRowCount(); i++){
             total += Double.parseDouble(model.getValueAt(i, 3).toString());
         }
         
-        totalLabel.setText(Double.toString(total));
+        totalLabel.setText(String.format("%.2f", total));
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -193,6 +225,10 @@ public class Checkout extends javax.swing.JFrame {
     private javax.swing.JTextField paymentFIeld;
     private javax.swing.JLabel totalLabel;
     // End of variables declaration//GEN-END:variables
+
+    public JTable getCheckoutTable() {
+        return checkoutTable;
+    }
 
 
 }
