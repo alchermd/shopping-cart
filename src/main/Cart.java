@@ -31,14 +31,14 @@ public class Cart extends javax.swing.JFrame {
      * Initialize the items list.
      */
     private void initProducts() {
-        products.add(new Product("Designer T-Shirt", 10.00, tshirtItem));
-        products.add(new Product("Custom Mug",       15.95, mugItem));
-        products.add(new Product("Concert Pass",     20.00, concertPassItem));
-        products.add(new Product("Premium Lanyard",  05.55, lanyardItem));
-        products.add(new Product("Basic Baller",     08.25, ballerItem));
-        products.add(new Product("Signature Pen",    01.15, penItem));
-        products.add(new Product("Lifetime Plan",    99.99, lifetimePlanItem));
-        products.add(new Product("3 Month Plan",     50.00, threeMonthPlanItem));
+        products.add(new Product("Org Shirt",     299.95, tshirtItem));
+        products.add(new Product("ID Lace",        65.00, idLaceItem));
+        products.add(new Product("S.E.F Form",     50.00, sefFormItem));
+        products.add(new Product("Exam Booklet",   05.00, examBookletItem));
+        products.add(new Product("Athlethic Fee", 150.75, athlethicFeeItem));
+        products.add(new Product("Insurance",     100.00, insuranceItem));
+        products.add(new Product("Burger",         30.00, burgerItem));
+        products.add(new Product("Unli Rice",      55.55, unliRiceItem));
     }
     
     /**
@@ -61,13 +61,13 @@ public class Cart extends javax.swing.JFrame {
 
         jLabel1 = new javax.swing.JLabel();
         tshirtItem = new javax.swing.JCheckBox();
-        mugItem = new javax.swing.JCheckBox();
-        concertPassItem = new javax.swing.JCheckBox();
-        lanyardItem = new javax.swing.JCheckBox();
-        lifetimePlanItem = new javax.swing.JCheckBox();
-        threeMonthPlanItem = new javax.swing.JCheckBox();
-        ballerItem = new javax.swing.JCheckBox();
-        penItem = new javax.swing.JCheckBox();
+        insuranceItem = new javax.swing.JCheckBox();
+        sefFormItem = new javax.swing.JCheckBox();
+        examBookletItem = new javax.swing.JCheckBox();
+        burgerItem = new javax.swing.JCheckBox();
+        unliRiceItem = new javax.swing.JCheckBox();
+        athlethicFeeItem = new javax.swing.JCheckBox();
+        idLaceItem = new javax.swing.JCheckBox();
         addToCartButton = new javax.swing.JButton();
         uncheckAllButton = new javax.swing.JButton();
         removeItemButton = new javax.swing.JButton();
@@ -79,23 +79,23 @@ public class Cart extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Shopping Cart");
+        jLabel1.setText("AMA Apalit Shopping Cart");
 
-        tshirtItem.setText("$10.00 -> Designer T-Shirt");
+        tshirtItem.setText("299.95 -> Org Shirt");
 
-        mugItem.setText("$15.95 -> Custom Mug");
+        insuranceItem.setText("100.00 -> Insurance");
 
-        concertPassItem.setText("$20.00 -> Concert Pass");
+        sefFormItem.setText(" 50.00 -> S.E.F Form");
 
-        lanyardItem.setText("$05.55 -> Premium Lanyard");
+        examBookletItem.setText(" 05.00 -> Exam Booklet");
 
-        lifetimePlanItem.setText("$99.99 -> Lifetime Plan");
+        burgerItem.setText(" 30.00 -> Burger");
 
-        threeMonthPlanItem.setText("$50.00 -> 3 Month Plan");
+        unliRiceItem.setText(" 55.55 -> Unli Rice");
 
-        ballerItem.setText("$08.25 -> Basic Baller");
+        athlethicFeeItem.setText("150.75 -> Athlethic Fee");
 
-        penItem.setText("$01.15 -> Signature Pen");
+        idLaceItem.setText(" 65.00 -> ID Lace");
 
         addToCartButton.setText("ADD TO CART");
         addToCartButton.addActionListener(new java.awt.event.ActionListener() {
@@ -143,32 +143,31 @@ public class Cart extends javax.swing.JFrame {
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addComponent(checkoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                .addComponent(tshirtItem)
-                                .addComponent(concertPassItem)
-                                .addComponent(lanyardItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(penItem))
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lifetimePlanItem)
-                            .addComponent(ballerItem)
-                            .addComponent(threeMonthPlanItem)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(removeItemButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(clearCartButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(uncheckAllButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
-                                .addComponent(addToCartButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addComponent(mugItem)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(162, 162, 162)
-                        .addComponent(jLabel1)))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(checkoutButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                        .addComponent(tshirtItem)
+                        .addComponent(sefFormItem)
+                        .addComponent(examBookletItem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(idLaceItem))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(burgerItem)
+                    .addComponent(athlethicFeeItem)
+                    .addComponent(unliRiceItem)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(removeItemButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(clearCartButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(uncheckAllButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
+                        .addComponent(addToCartButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(insuranceItem))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(113, 113, 113))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -178,19 +177,19 @@ public class Cart extends javax.swing.JFrame {
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(tshirtItem)
-                    .addComponent(ballerItem))
+                    .addComponent(athlethicFeeItem))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(mugItem)
-                    .addComponent(penItem))
+                    .addComponent(insuranceItem)
+                    .addComponent(idLaceItem))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(concertPassItem)
-                    .addComponent(lifetimePlanItem))
+                    .addComponent(sefFormItem)
+                    .addComponent(burgerItem))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(threeMonthPlanItem)
-                    .addComponent(lanyardItem))
+                    .addComponent(unliRiceItem)
+                    .addComponent(examBookletItem))
                 .addGap(12, 12, 12)
                 .addComponent(filler1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(29, 29, 29)
@@ -288,22 +287,22 @@ public class Cart extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addToCartButton;
-    private javax.swing.JCheckBox ballerItem;
+    private javax.swing.JCheckBox athlethicFeeItem;
+    private javax.swing.JCheckBox burgerItem;
     private javax.swing.JList<String> cartList;
     private javax.swing.JButton checkoutButton;
     private javax.swing.JButton clearCartButton;
-    private javax.swing.JCheckBox concertPassItem;
+    private javax.swing.JCheckBox examBookletItem;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JCheckBox idLaceItem;
+    private javax.swing.JCheckBox insuranceItem;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JCheckBox lanyardItem;
-    private javax.swing.JCheckBox lifetimePlanItem;
-    private javax.swing.JCheckBox mugItem;
-    private javax.swing.JCheckBox penItem;
     private javax.swing.JButton removeItemButton;
-    private javax.swing.JCheckBox threeMonthPlanItem;
+    private javax.swing.JCheckBox sefFormItem;
     private javax.swing.JCheckBox tshirtItem;
     private javax.swing.JButton uncheckAllButton;
+    private javax.swing.JCheckBox unliRiceItem;
     // End of variables declaration//GEN-END:variables
 
 }

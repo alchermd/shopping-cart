@@ -29,39 +29,36 @@
               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Component id="checkoutButton" max="32767" attributes="0"/>
-                              <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="tshirtItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="concertPassItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                              <Component id="lanyardItem" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="penItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace type="separate" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lifetimePlanItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="ballerItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="threeMonthPlanItem" min="-2" max="-2" attributes="0"/>
-                          <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                              <Component id="removeItemButton" alignment="0" max="32767" attributes="0"/>
-                              <Component id="clearCartButton" alignment="0" max="32767" attributes="0"/>
-                              <Component id="uncheckAllButton" alignment="0" pref="155" max="32767" attributes="0"/>
-                              <Component id="addToCartButton" alignment="0" max="32767" attributes="0"/>
-                          </Group>
-                          <Component id="mugItem" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                      <Component id="checkoutButton" max="32767" attributes="0"/>
+                      <Component id="jScrollPane1" alignment="0" pref="0" max="32767" attributes="0"/>
+                      <Component id="tshirtItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="sefFormItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="examBookletItem" max="32767" attributes="0"/>
                   </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="162" max="-2" attributes="0"/>
-                      <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <Component id="idLaceItem" alignment="0" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="burgerItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="athlethicFeeItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="unliRiceItem" min="-2" max="-2" attributes="0"/>
+                  <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                      <Component id="removeItemButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="clearCartButton" alignment="0" max="32767" attributes="0"/>
+                      <Component id="uncheckAllButton" alignment="0" pref="155" max="32767" attributes="0"/>
+                      <Component id="addToCartButton" alignment="0" max="32767" attributes="0"/>
                   </Group>
+                  <Component id="insuranceItem" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -73,22 +70,22 @@
               <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="tshirtItem" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="ballerItem" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="athlethicFeeItem" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="mugItem" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="penItem" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="insuranceItem" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="idLaceItem" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="concertPassItem" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="lifetimePlanItem" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sefFormItem" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="burgerItem" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="threeMonthPlanItem" min="-2" max="-2" attributes="0"/>
-                  <Component id="lanyardItem" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="unliRiceItem" min="-2" max="-2" attributes="0"/>
+                  <Component id="examBookletItem" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="12" max="-2" attributes="0"/>
               <Component id="filler1" min="-2" max="-2" attributes="0"/>
@@ -115,47 +112,47 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Shopping Cart"/>
+        <Property name="text" type="java.lang.String" value="AMA Apalit Shopping Cart"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JCheckBox" name="tshirtItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$10.00 -&gt; Designer T-Shirt"/>
+        <Property name="text" type="java.lang.String" value="299.95 -&gt; Org Shirt"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="mugItem">
+    <Component class="javax.swing.JCheckBox" name="insuranceItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$15.95 -&gt; Custom Mug"/>
+        <Property name="text" type="java.lang.String" value="100.00 -&gt; Insurance"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="concertPassItem">
+    <Component class="javax.swing.JCheckBox" name="sefFormItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$20.00 -&gt; Concert Pass"/>
+        <Property name="text" type="java.lang.String" value=" 50.00 -&gt; S.E.F Form"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="lanyardItem">
+    <Component class="javax.swing.JCheckBox" name="examBookletItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$05.55 -&gt; Premium Lanyard"/>
+        <Property name="text" type="java.lang.String" value=" 05.00 -&gt; Exam Booklet"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="lifetimePlanItem">
+    <Component class="javax.swing.JCheckBox" name="burgerItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$99.99 -&gt; Lifetime Plan"/>
+        <Property name="text" type="java.lang.String" value=" 30.00 -&gt; Burger"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="threeMonthPlanItem">
+    <Component class="javax.swing.JCheckBox" name="unliRiceItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$50.00 -&gt; 3 Month Plan"/>
+        <Property name="text" type="java.lang.String" value=" 55.55 -&gt; Unli Rice"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="ballerItem">
+    <Component class="javax.swing.JCheckBox" name="athlethicFeeItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$08.25 -&gt; Basic Baller"/>
+        <Property name="text" type="java.lang.String" value="150.75 -&gt; Athlethic Fee"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JCheckBox" name="penItem">
+    <Component class="javax.swing.JCheckBox" name="idLaceItem">
       <Properties>
-        <Property name="text" type="java.lang.String" value="$01.15 -&gt; Signature Pen"/>
+        <Property name="text" type="java.lang.String" value=" 65.00 -&gt; ID Lace"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="addToCartButton">
